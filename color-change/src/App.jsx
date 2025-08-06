@@ -23,8 +23,8 @@ function App() {
         }}
       >
         <img
-          src="/assets/cc.svg"
-          alt="Color Change SVG"
+          src="/assets/text.svg"
+          alt="Text SVG"
           style={{ width: '300px', height: 'auto', display: 'block' }}
         />
       </div>
