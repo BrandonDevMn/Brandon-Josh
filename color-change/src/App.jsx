@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 
+
 function App() {
-  const [bgColor, setBgColor] = useState('blue');
+  const colors = ['#add8e6', '#ffb6c1']; // light blue, light pink
+  const [colorIndex, setColorIndex] = useState(0);
+  const bgColor = colors[colorIndex];
 
   const handleChangeColor = () => {
-    setBgColor('pink');
+    setColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
   };
 
   return (
     <div>
       <h1>Hello, World!</h1>
       <button onClick={handleChangeColor} style={{ marginBottom: '1rem' }}>
-        Change SVG Background to Pink
+        Change SVG Background Color
       </button>
       <div
         style={{
